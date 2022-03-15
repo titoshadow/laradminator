@@ -26,9 +26,10 @@ mix.webpackConfig(webpack => {
 
 
 mix.js('resources/js/app.js', 'public/js')
+    .vue()
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/rtl.scss', 'public/css')
-    .copyDirectory('resources/static/images','public/images')
-    .browserSync('laradminator.local')
+    .copyDirectory('resources/sass/static/images','public/images')
+    .browserSync(process.env.APP_URL)
     .version()
     .sourceMaps();

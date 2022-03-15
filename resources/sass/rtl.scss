@@ -1,7 +1,8 @@
-// @import "~bootstrap-v4-rtl/scss/bootstrap-rtl.scss";
 @import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
 
-
+/**
+Global properties
+*/
 html,
 body {
     direction: rtl;
@@ -112,3 +113,71 @@ button.close {
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     float: left !important;
 }
+
+.list-group .list-group-item .checkbox label {
+    padding-right: 20px;
+}
+
+.list-group .list-group-item .checkbox label:before,
+.list-group .list-group-item .checkbox label:after {
+    left: unset;
+    right: 0;
+}
+
+/**
+Properties relative to desktop screen
+*/
+@media screen and (max-width: 1439px) and (min-width: 992px) {
+    .page-container {
+        padding-left: 0px;
+        padding-right: 70px;
+    }
+
+    .is-collapsed .page-container {
+        padding-right: 280px;
+    }
+
+    .header .header-container .nav-right .dropdown-menu>li>a {
+        display: flex !important;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 991px) {
+    .header .header-container .nav-left {
+        padding: 0 15px 0 0;
+    }
+
+    .page-container {
+        padding-right: 0;
+    }
+
+    .is-collapsed .page-container {
+        padding-right: 0
+    }
+
+    .is-collapsed .sidebar {
+        right: 0;
+        left: inherit;
+    }
+
+    .sidebar-logo .mobile-toggle a {
+        transform: rotate(180deg);
+        margin: 10px;
+    }
+
+    .sidebar {
+        right: -280px;
+        left: inherit;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 480px) {}
